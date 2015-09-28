@@ -44,10 +44,23 @@
     <!-- Drag and drop. -->
     <h3>Drag and Drop példa</h3>
     <div class="container drop-container">
-        <div class="source">
-            <img src="http://www.w3schools.com/html/img_w3slogo.gif" draggable="true">
+        <!-- Forrás DIV. -->
+        <div class="source" ondragover="allowDrop(event)" onmouseout="dropLeaved(event)" ondrop="drop(event)" onmouseover="allowDrop(event)">
+            <p>Termékek</p>
+            <img id="img1" src="img/bread_1.jpg" draggable="true" ondragstart="drag(event)" data-ar="400">
+            <img id="img2" src="img/bread_2.jpg" draggable="true" ondragstart="drag(event)" data-ar="350">
+            <img id="img3" src="img/bread_3.jpg" draggable="true" ondragstart="drag(event)" data-ar="250">
+            <div class="price-div"></div>
         </div>
-        <div class="target" ondragover="allowDrop(event)">&nbsp;</div>
+        
+        <!-- Cél DIV. -->
+        <div class="target" ondragover="allowDrop(event)" onmouseout="dropLeaved(event)" ondrop="drop(event)" onmouseover="allowDrop(event)">
+            <p>Kosár</p>
+            <div class="price-div"></div>
+        </div>
+        <div class="ar-div">
+<!--            0 Ft    -->
+        </div>
     </div>
 
     <!-- Canvas. -->

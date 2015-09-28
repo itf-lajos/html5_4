@@ -17,13 +17,49 @@
 .drop-container {
     background-color: aliceblue;
     box-shadow: 0 0 5px;
+    min-height: 600px;
+    position: relative;
 }
 
-.drop-container div {
+.drop-container .source,
+.drop-container .target {
     width: 200px;
-    height: 100px;
+    height: 500px;
     margin: 10px;
     display: inline-block;
     border: solid 1px "#777777";
     background-color: white;
+    position: absolute;
+    top: 10px;
+}
+
+.drop-container .source {
+    left: 100px;
+}
+
+.drop-container .target {
+    left: 400px;
+}
+
+.drop-container img {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.drop-container p {
+    font-weight: bold;
+}
+
+/*#img1 {
+    top: 30px;
+    margin: 0 auto;
+}*/
+
+.price-div {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 30px;
+    background-color: aqua;
 }
